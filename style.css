@@ -53,30 +53,51 @@ body {
 
 
 .container {
-    width: min(100% - 2rem, 40rem);
+    width: min(100% - 3rem, 23.4375rem);
     margin-inline: auto;
     background-color: var(--clr-neutral-dark-grey);
+    border-radius: 20px;
 }
 
+h1{
+    font-size: 1.55rem;
+    font-weight: var(--fw-600);
+}
 
+h3{
+    color: var(--clr-primary-green);
+    padding-bottom: .75rem;
+}
 
 .wrapper {
-    padding: 1rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .biography {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    gap: 1rem;
 }
 
 .img-container {
     border-radius: 50%;
+    width: auto;
+    margin-bottom: 1rem;
+
+    display: flex;
+    justify-content: center;
 }
 
 img {
-    object-fit: cover;
     border-radius: inherit;
+    width: 50%;
 }
 
 ul[role="list"],
@@ -90,7 +111,7 @@ ul li a {
     font-weight: var(--fw-600);
     background-color: var(--clr-neutral-grey);
     border-radius: 0.625rem;
-    padding: 10px;
+    padding-block: 1rem;
 
     display: block;
 }
@@ -101,6 +122,12 @@ ul {
     gap: 1rem;
 }
 
+li a:hover, li a:focus{
+    background-color: var(--clr-primary-green);
+    color: var(--clr-neutral-off-black);
+    transition: 250ms ease-in-out;
+}
+
 .social-links {
     text-align: center;
 }
@@ -108,8 +135,12 @@ ul {
 .attribution {
     font-size: 11px;
     text-align: center;
+
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: rgb(38, 129, 94);
 }
